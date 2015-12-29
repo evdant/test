@@ -1,0 +1,17 @@
+include ../sect-title/sect-title
+
+mixin advantages(title, list)
+	+b.advantages&attributes(attributes)
+		+e.inner
+			+sectTitle(title)
+			+e.list
+				each item in list
+					+e.item
+						+e.icon-box
+							+icon(item[0]).advantages__item-icon
+						+e.item-content
+							+e('h3').item-title
+								= item[1]
+							+e('p').item-description
+								= item[2]
+		block

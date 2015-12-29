@@ -1,0 +1,80 @@
+price_width = 1000px
+price_item_marg = 30px
+
+.price
+	padding-top 70px
+	padding-bottom 50px
+
+	&__inner
+		width price_width
+		margin 0 auto
+		
+	&__price-list
+		clearfix()
+		width 100%
+		margin-bottom 50px
+		
+	&__price-item
+		float left
+		margin-x price_item_marg
+		width (price_width/3 - price_item_marg*2)
+		overflow hidden
+		background-color #f9f9f9
+		box-shadow: 5px 5px 5px 0px #e2e2e2
+		border-radius 5px
+		
+	&__item-title
+		color #7e7e7e
+		font-size 18px
+		text-align center
+		margin-bottom 5px
+	
+	&__item-cost
+		color #1d73be
+		font-size 18px
+		text-align center
+		margin-bottom 20px
+	
+		&_margin_big
+			margin-y 35px
+		
+	&__cost-number
+		font-size 24px
+		
+	&__img-wrap
+		position relative
+		height 160px
+		overflow hidden
+		margin-bottom 20px
+
+	&__item-img
+		position absolute
+		width 275px
+		height auto
+		left -9999px
+		right -9999px
+		top -9999px
+		bottom -9999px
+		margin auto
+	
+	&__button
+		color #212322
+		width 100%
+		border-radius 0
+		height 75px
+		line-height @height
+		border-bottom 0
+		background-color #ffd32a
+		background-image none
+		
+		&:hover
+			color #fff
+			background-image none
+			line-height @height
+			background-color darken(#ffd32a, 30%)
+	
+	&__bot-text
+		font-size 14px
+		color #414141
+		text-align center
+			

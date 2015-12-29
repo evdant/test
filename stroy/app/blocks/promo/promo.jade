@@ -1,0 +1,28 @@
+include ../button/button
+
+mixin promo()
+	+b.promo&attributes(attributes)
+		+e.promo-inner
+			+e('h1').title
+				| Профессиональный ремонт и качественная отделка любых
+				| помещений в Оренбурге
+			+e('ul').garant-list
+				+e('li').garant-item
+					+e.garant-text
+						| Опыт более 3-х лет
+				+e('li').garant-item
+					+e.garant-text
+						| Гарантия 1 год
+				+e('li').garant-item
+					+e.garant-text
+						| Более 2000 объектов
+			+e.sale
+				+e.sale-title
+					| Акция!
+				+e.sale-content
+					| При заказе комплексного ремонта/отделки
+					| комнаты или квартиры - оклейка стен обоями
+				+e.sale-subtitle
+					| Бесплатно!!!
+				+button('Закажите точный расчёт стоимости ремонта').promo__button.controller-modal
+			block

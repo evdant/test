@@ -1,0 +1,30 @@
+include ../icon/icon
+
+mixin freeServices()
+	+b.free-services&attributes(attributes)
+		+e.inner
+			+e.service-item
+				+icon('free-icon-1').free-services__service-icon
+				+e.service-title
+					| Выезд мастера и замер БЕСПЛАТНО
+			+e.service-item
+				+icon('free-icon-2').free-services__service-icon
+				+e.service-title
+					| Составление и корректировка сметы БЕСПЛАТНО
+			+e.service-item
+				+icon('free-icon-3').free-services__service-icon
+				+e.service-title
+					| Погрузка строительных материалов БЕСПЛАТНО
+			+e.service-item
+				+icon('free-icon-4').free-services__service-icon
+				+e.service-title
+					| Доставка строительных материалов БЕСПЛАТНО
+			+e.service-item
+				+icon('free-icon-5').free-services__service-icon
+				+e.service-title
+					| Разгрузка строительных материалов БЕСПЛАТНО
+			+e.service-item
+				+icon('free-icon-6').free-services__service-icon
+				+e.service-title
+					| Возврат остатков стройматериала БЕСПЛАТНО
+			block

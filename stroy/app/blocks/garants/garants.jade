@@ -1,0 +1,10 @@
+mixin garants(list)
+	+b.garants&attributes(attributes)
+		+e('ul').list
+			each item in list
+				+e('li').list-item
+					| ВАМ точно 
+					+e('span').item-red-part
+						|  не придётся 
+					= item
+		block

@@ -1,0 +1,15 @@
+mixin form()
+	+b.form
+		+e('label').name-label(for='name')
+			| Имя:
+		+e('input').name-input#name(placeholder='Иван')
+
+		+e('label').phone-label(for='phone')
+			| Телефон:
+		+e('input').phone-input#phone(placeholder='+79001231133')
+
+		+e('label').email-label(for='email')
+			| E-Mail:
+		+e('input').email-input#email(type='email' placeholder='ivan@gmail.com')
+
+		+button('Отправить').form__button

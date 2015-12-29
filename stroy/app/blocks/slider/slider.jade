@@ -1,0 +1,44 @@
+mixin slider()
+	+b.slider&attributes(attributes)
+		+e.order
+			+e.order-title
+				| Закажите точный расчёт
+				| стоимости ремонта
+			+button('Заказать').slider__order-button.controller-modal
+
+		+e('ul').slider-list
+			+e('li').slide
+				+e('img').slide-img(src='assets/img/temp/slide-1.jpg')
+
+			+e('li').slide
+				+e('img').slide-img(src='assets/img/temp/slide-2.jpg')
+
+			+e('li').slide
+				+e('img').slide-img(src='assets/img/temp/slide-3.jpg')
+
+			+e('li').slide
+				+e('img').slide-img(src='assets/img/temp/slide-4.jpg')
+				
+			+e('li').slide
+				+e('img').slide-img(src='assets/img/temp/slide-5.jpg')
+
+		+e('ul').pager
+			+e('li').pager-item
+				+e('a').pager-link(href='#')
+					+e('img').pager-img(src='assets/img/temp/slide-1.jpg')
+
+			+e('li').pager-item
+				+e('a').pager-link(href='#')
+					+e('img').pager-img(src='assets/img/temp/slide-2.jpg')
+
+			+e('li').pager-item
+				+e('a').pager-link(href='#')
+					+e('img').pager-img(src='assets/img/temp/slide-3.jpg')
+
+			+e('li').pager-item
+				+e('a').pager-link(href='#')
+					+e('img').pager-img(src='assets/img/temp/slide-4.jpg')
+
+			+e('li').pager-item
+				+e('a').pager-link(href='#')
+					+e('img').pager-img(src='assets/img/temp/slide-5.jpg')

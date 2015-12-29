@@ -1,0 +1,38 @@
+include ../logo/logo
+include ../link/link
+
+mixin header()
+	+b.header&attributes(attributes)
+		+e.top-line
+			+logo.header__logo(href='#')
+
+			+e.info
+				+e('span').info-code
+					| (3532)
+				+e('span').info-phone
+					| 435-406
+				+e('span').info-call
+					+link.header__info-link.controller-modal
+						| Заказать звонок
+				+e.info-city
+					| г. Оренбург, пр. Северный, 10
+				+e.info-time
+					| Режим работы: с 9.00 до 18.00
+
+		+e.menu
+			+e('ul').menu-inner
+				+e('li').menu-item
+					+e('a').menu-link(href='#services')
+						| Услуги
+				+e('li').menu-item
+					+e('a').menu-link(href='#portfolio')
+						| Работы
+				+e('li').menu-item
+					+e('a').menu-link(href='#price')
+						| Цены
+				+e('li').menu-item
+					+e('a').menu-link(href='#reviews')
+						| Отзывы
+				+e('li').menu-item
+					+e('a').menu-link(href='#contacts')
+						| Контакты

@@ -1,0 +1,65 @@
+include ../sect-title/sect-title
+include ../link/link
+
+mixin work()
+	+b.work&attributes(attributes)
+		+e.inner
+			+sectTitle('Схема работы')
+			+e.left-col
+				+e.work-item
+					+icon('work-icon-1').work__work-icon
+					+e.work-description
+						| ВЫ оставляете 
+						+link(href='javascript:void(0);').controller-modal
+							| заявку
+						|  на нашем сайте или звоните нам по телефону 
+						+link(href='tel:3532435406')
+							| (3532) 435-406
+				+e.work-item
+					+icon('work-icon-3').work__work-icon
+					+e.work-description
+						| Менеджер составляет смету и передает её ВАМ 
+						| на согласование, корректировку и утверждение
+				+e.work-item
+					+icon('work-icon-5').work__work-icon
+					+e.work-description
+						| ВЫ вносите 10% предоплаты за строительные 
+						| работы и 100% за строительный материал
+				+e.work-item
+					+icon('work-icon-7').work__work-icon
+					+e.work-description
+						| ВЫ становитесь счастливым обладателем 
+						| шикарного, комфортного и качественного ремонта
+			+e.sep
+				+e.line
+				+e.num-box
+					+icon('work-num-1').work__num-icon
+				+e.num-box
+					+icon('work-num-2').work__num-icon
+				+e.num-box
+					+icon('work-num-3').work__num-icon
+				+e.num-box
+					+icon('work-num-4').work__num-icon
+				+e.num-box
+					+icon('work-num-5').work__num-icon
+				+e.num-box
+					+icon('work-num-6').work__num-icon
+				+e.num-box
+					+icon('work-num-7').work__num-icon
+			+e.right-col
+				+e.work-item
+					+icon('work-icon-2').work__work-icon
+					+e.work-description
+						| Мастер приезжает на ВАШ объект в любое удобное 
+						| для ВАС время и производит точный замер 
+						| помещений
+				+e.work-item
+					+icon('work-icon-4').work__work-icon
+					+e.work-description
+						| Заключаем договор на строительные работы и 
+						| поставку строительных материалов
+				+e.work-item
+					+icon('work-icon-6').work__work-icon
+					+e.work-description
+						| Мы закупаем и доставляем строительный материал 
+						| и поэтапно выполняем все работы

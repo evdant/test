@@ -1,0 +1,26 @@
+lines_color = darken(rgba(254, 155, 0, 0.15), 30%)
+bottom_bord_color = #d86c00
+bottom_grad = #ffaf02
+top_grad = #ffd32a
+text_color = #3c1800
+
+button(h)
+	height h
+	line-height h
+	border-radius (h/2)
+	
+	&:hover
+		line-height h + 3px
+
+.button
+	button(40px)
+	border-bottom 3px solid bottom_bord_color
+	font-weight bold
+	text-align center
+	color text_color
+	background-image repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 8px, lines_color 11px), linear-gradient(to bottom, top_grad, bottom_grad)
+	
+	&:hover
+		cursor pointer
+		background-image repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 8px, lines_color 11px), linear-gradient(to bottom, bottom_grad, top_grad)
+		border-bottom 0

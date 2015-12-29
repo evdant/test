@@ -1,0 +1,38 @@
+.modal
+	position fixed
+	display none
+	top 0
+	left 0
+	bottom 0
+	right 0
+	background rgba(#000, .5)
+	z-index 1000
+	
+	&__inner
+		position absolute
+		width auto
+		min-height 300px
+		border 10px solid #fc0
+		top 50%
+		left 50%
+		transform translate(-50%, -50%)
+		background #fff
+		
+	&__close
+		position absolute
+		display block
+		width 30px
+		height @width
+		background #fc0
+		border-radius 50%
+		right -(@width/2 + 5)
+		top @right
+		font-family opensans_bold
+		font-size 30px
+		line-height @width - 3px
+		text-align center
+		cursor pointer
+		
+	&__close:hover
+		color darken(#414141, 20%)
+		background darken(#fc0, 20%)

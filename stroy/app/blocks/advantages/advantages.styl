@@ -1,0 +1,75 @@
+adv_icon_color = #ffcc00
+
+.advantages
+	position relative
+	padding-top 50px
+	padding-bottom 60px
+	
+	&:before
+		before()
+		background rgba(#fff, 0.85)
+	
+	&__inner
+		position relative
+		width 1000px
+		margin 0 auto
+			
+	&__item
+		clearfix()
+		margin-bottom 38px
+			
+	&__icon-box
+		position relative
+		display inline-block
+		float left
+		background-color adv_icon_color
+		margin-left 50px
+		width 111px
+		height 111px
+		
+		&:after
+			content ''
+			position absolute
+			right -21px
+			top 50%
+			transform translateY(-50%)
+			display block
+			width 0
+			height 0
+			border-top 21px solid transparent
+			border-bottom 21px solid transparent
+			border-left 21px solid adv_icon_color
+			
+	&__item-icon
+		display block
+		position absolute
+		top 50%
+		left 50%
+		transform translate(-50%, -50%)
+		width 81px
+		height 81px
+		
+	&__item-content
+		display inline-block
+		max-width 650px
+		margin-left 50px
+		line-height 1.2
+		float left
+		text-align justify
+		
+	&__item-title
+		display inline-block
+		line-height 34px
+		padding-x 10px
+		margin-bottom 10px
+		background-color adv_icon_color
+		
+	&_theme_first
+		background url('../img/advantages-bg-first-min.jpg')
+		background-position center 0
+		background-size cover
+		
+	&_theme_second
+		background url('../img/advantages-bg-second-min.jpg')
+		background-position center 0
+		background-size cover

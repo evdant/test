@@ -1,0 +1,9 @@
+mixin footer()
+	+b.footer&attributes(attributes)
+		+e.inner
+			+e('a').logo(href='#')
+				+e('img').logo-img(src='assets/img/footer-logo.jpg')
+			+e.text
+				| Сайт по ремонту и отделке в Оренбурге, а также
+				| система привлечения клиентов разработаны командой
+				| TeamSale.Ru 2015 &copy; Все права защищены

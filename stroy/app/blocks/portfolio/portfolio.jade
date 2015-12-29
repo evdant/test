@@ -1,0 +1,9 @@
+include ../sect-title/sect-title
+include ../slider/slider
+
+mixin portfolio()
+	+b.portfolio&attributes(attributes)
+		+e.inner
+			+sectTitle('Работы')
+			+slider
+			block

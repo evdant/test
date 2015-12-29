@@ -1,0 +1,93 @@
+include ../sect-title/sect-title
+include ../description-list/description-list
+
+- var price = getData('price');
+
+- var price1_list1 = price.price_1[0];
+- var price1_list2 = price.price_1[1];
+- var price1_list3 = price.price_1[2];
+
+- var price2_list1 = price.price_2[0];
+- var price2_list2 = price.price_2[1];
+- var price2_list3 = price.price_2[2];
+- var price2_list4 = price.price_2[3];
+
+- var price3_list1 = price.price_3[0];
+- var price3_list2 = price.price_3[1];
+- var price3_list3 = price.price_3[2];
+- var price3_list4 = price.price_3[3];
+
+mixin price()
+	+b.price&attributes(attributes)
+		+e.inner
+			+sectTitle('Стоимость')
+			+e.price-list
+				+e.price-item
+					+e('h3').item-title
+						| Евро-эконом*
+					+e.item-cost
+						| от 
+						+e('span').cost-number
+							| 1800 
+						| руб./кв.м
+					+e.img-wrap
+						+e('img').item-img(src='assets/img/temp/price-img-1.jpg')
+					+descriptionList(price1_list1[0],price1_list1[1])
+					+descriptionList(price1_list2[0],price1_list2[1])
+					+descriptionList(price1_list3[0],price1_list3[1])
+					+e.item-cost.price__item-cost_margin_big
+						| от 
+						+e('span').cost-number
+							| 1800
+						| руб./кв.м
+					+button('Заказать точный расчёт').price__button.controller-modal
+
+
+				+e.price-item
+					+e('h3').item-title
+							| Евро-стандарт*
+					+e.item-cost
+						| от 
+						+e('span').cost-number
+							| 3000
+						| руб./кв.м
+					+e.img-wrap
+						+e('img').item-img(src='assets/img/temp/price-img-2.jpg')
+					+descriptionList(price2_list1[0],price2_list1[1])
+					+descriptionList(price2_list2[0],price2_list2[1])
+					+descriptionList(price2_list3[0],price2_list3[1])
+					+descriptionList(price2_list3[0],price2_list3[1])
+					+e.item-cost.price__item-cost_margin_big
+						| от 
+						+e('span').cost-number
+							| 3000
+						| руб./кв.м
+					+button('Заказать точный расчёт').price__button.controller-modal
+
+					
+				+e.price-item
+					+e('h3').item-title
+							| Евро-элит*
+					+e.item-cost
+						| от 
+						+e('span').cost-number
+							| 4000
+						| руб./кв.м
+					+e.img-wrap
+						+e('img').item-img(src='assets/img/temp/price-img-3.jpg')
+					+descriptionList(price3_list1[0],price3_list1[1])
+					+descriptionList(price3_list2[0],price3_list2[1])
+					+descriptionList(price3_list3[0],price3_list3[1])
+					+descriptionList(price3_list4[0],price3_list3[1])
+						+e('li').descr-list-item.description-list__item.description-list__item_bold
+							| Отделочные работы по дизайн-проекту
+					+e.item-cost.price__item-cost_margin_big
+						| от 
+						+e('span').cost-number
+							| 4000
+						| руб./кв.м
+					+button('Заказать точный расчёт').price__button.controller-modal
+			+e.bot-text
+				| *цены указаны без работ по установке дверей,
+				| сантехники и электрики
+			block

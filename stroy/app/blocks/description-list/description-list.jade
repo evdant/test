@@ -1,0 +1,9 @@
+mixin descriptionList(title, list)
+	+b.description-list&attributes(attributes)
+		+e('h4').title
+			= title
+		+e('ul').list
+			- each item in list
+				+e('li').item
+					= item
+			block

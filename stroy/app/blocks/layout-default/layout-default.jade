@@ -1,0 +1,50 @@
+include ../../../node_modules/bemto.jade/bemto.jade
+include ../page/page
+include ../header/header
+include ../promo/promo
+include ../notice/notice
+include ../free-services/free-services
+include ../advantages/advantages
+include ../garants/garants
+include ../services/services
+include ../work/work
+include ../portfolio/portfolio
+include ../price/price
+include ../reviews/reviews
+include ../contacts/contacts
+include ../footer/footer
+include ../modal/modal
+include ../form/form
+include ../video/video
+include ../scripts/scripts
+
+- var advantages = getData('advantages');
+- var garants = getData('garants');
+
+doctype html
+html(lang='ru')
+	include ../head/head
+	+page
+		+header
+		+promo
+		+notice
+		+freeServices
+		+advantages('Преимущества', advantages.adv_1)._theme_first
+		+services#services
+		+advantages('Преимущества', advantages.adv_2)._theme_second
+			+garants(garants).notice__inner
+		+work
+		+portfolio#portfolio
+		+price#price
+		+reviews#reviews
+		+contacts#contacts
+		+footer
+		+modal(data-modal=1)
+			+form
+		+modal(data-modal=2)
+			+video
+		
+		+scripts(['app.min.js'])
+		script(src='assets/scripts/jquery.min.js')
+		script(src='assets/scripts/responsiveslides.min.js')
+		script(src='assets/scripts/common.js')

@@ -1,0 +1,91 @@
+title_color = #384d5e
+garant_color = darken(rgba(123, 100, 84, 0.7), 30%)
+sale_title_color = #e74747
+sale_bgc = #e9f1fc
+
+.promo
+	position relative
+	background url('../img/main-bg-min.jpg')
+	background-position center 0
+	background-size cover
+	padding-top 45px
+	
+	&:before
+		before()
+		background #fff
+		opacity 0.7
+	
+	&__promo-inner
+		position relative
+		width 1000px
+		margin 0 auto
+		margin-bottom 175px
+		
+	&__title
+		text-align center
+		text-transform uppercase
+		font-size 40px
+		font-family opensans_bold
+		margin-bottom 35px
+		color title_color
+		
+	&__garant-list
+		text-align center
+		font-size 0
+	
+	&__garant-item
+		display inline-block
+		width (100/3)%
+		
+	&__garant-text
+		display inline-block
+		padding-x 12px
+		padding-y 5px
+		background-color garant_color
+		font-size 16px
+		color #fff
+		text-transform uppercase
+		font-family opensans_bold
+		
+	&__sale
+		position relative
+		margin 0 auto
+		width 516px
+		padding-top 26px
+		padding-bottom 35px
+		margin-top 70px
+		margin-bottom 130px
+		background-color rgba(sale_bgc, 0.6)
+		
+	&__sale-title
+		margin-bottom 8px
+		text-transform uppercase
+		text-align center
+		font-size 32px
+		color sale_title_color
+		
+	&__sale-content
+		text-align center
+		color #3e3e40
+		font-size 16px
+		font-family opensans_bold
+		margin-x 10%
+		margin-bottom 5px
+		line-height 1.4
+		
+	&__sale-subtitle
+		text-transform uppercase
+		font-family opensans_bold
+		color #e7585a
+		text-align center
+		margin-bottom 14px
+		
+.promo__button.button
+	button(70px)
+	position absolute
+	width 105%
+	left 50%
+	transform translateX(-50%)
+	text-transform uppercase
+	font-size 16px
+	font-family opensans_bold

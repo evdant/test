@@ -1,0 +1,31 @@
+mixin contacts()
+	+b.contacts&attributes(attributes)
+		iframe.contacts__map(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2466.0917448251507!2d55.15998901589671!3d51.822754495417236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x417bf65ed3ac69d3%3A0xd46519ffb51082e4!2z0KHQtdCy0LXRgNC90YvQuSDQv9GALdC0LCAxMCwg0J7RgNC10L3QsdGD0YDQsywg0J7RgNC10L3QsdGD0YDQs9GB0LrQsNGPINC-0LHQuy4sIDQ2MDA1Mg!5e0!3m2!1sru!2sru!4v1450996347517' height='600' frameborder='0' style='border:0; margin-top: -150px;')
+		+e.inner
+			+e.info
+				+e('ul').info-list
+					+e('li').list-item
+						+e.phone
+							| (3532)435-406
+						+e('a').link.link(href='javascript:void(0)').controller-modal
+							| Заказать звонок
+
+					+e('li').list-item
+						| г.Оренбург,
+						+e('a').link.link(href='javascript:void(0)')
+							| пр.Северный, 10
+							| пр.Автоматики, 28А
+
+					+e('li').list-item
+						| Центр ремонта и отделки в Оренбурге
+
+					+e('li').list-item
+						| ИНН 561209981366
+						| ОГРН 315565800010718
+
+					+e('li').list-item
+						| Режим работы: с 9.00 до 18.00
+
+					+e('li').list-item
+						+e('a').link.link(href='javascript:void(0)')
+							| Политика конфиденциальности
